@@ -3,7 +3,6 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <meta charset="utf-8">
-        <link rel="shortcut icon" href="Images/pincer.svg" type="image/x-icon">
         <title>CaTech</title>
         <link rel="stylesheet" href="/Styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,35 +13,54 @@
             <div class="head">
                 <nav>
                     <ul class="navlink">
-                        <li><a href="#about">About</a></li>
+                        <li name="test"><a href="#about">About</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="">Bantuan</a></li>
+                        <?php
+                            require('connect.php');
+                            session_start();
+                            if(isset($_POST['nama']) and isset($_POST['pw'])){
+                            $nama = $_POST['nama'];
+                            $pw = $_POST['pw'];
+                            $query = "SELECT * FROM `tb_dataprib` WHERE nama='$nama' and password='$pw'";
+                            $result = mysqli_query($con, $query) or die(mysqli_error($con));
+                            $count = mysqli_num_rows($result);
+                            if ($count == 1){
+                                $_SESSION['nama'] = $nama;
+                                $_SESSION['pw'] = $pw;
+                            }else{
+                                header('Location: login.php');
+                            }
+                        }
+                        if(isset($_SESSION['nama'])){
+                            $nama = $_SESSION['nama'];
+                            echo "<li style='margin-top:3%;'><a href='profileweb.php'>".$nama."</a></li>";
+                            echo "<a href='/Pages/logout.php' style='color:pink;'>Logout <li class='far fa-caret-square-right' name='logout'></li></a>";
+                        }
+                        ?>
                     </ul>
                 </nav>
-                <button><a href="/Pages/loginweb.php">Login</a></button>
-                </div>
-                <script>
-                    var modal = document.getElementById('login');
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
-                <script>
-                    var modal = document.getElementById('daftar');
-
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
             </div>
+            <button onclick="topFunction()" id="myBtn" title="Kembali ke atas"><i class="fas fa-angle-double-up"></i></button>
+            <script>
+                mybutton = document.getElementById("myBtn");
+                window.onscroll = function() {scrollFunction()};
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
         </header>
-        <button onclick="topFunction()" id="myBtn" title="Kembali ke atas"><i class="fas fa-angle-double-up"></i></button>
-        <script src="Scripts/scrollup.js"></script>
         <div class="content">
+            <div class="welcome" style="text-align:center; font-size:50px;">
+            </div>
             <div class="wel_text">
                 <p class="welcome" style="font-size: 50px; font-weight: bold;">Selamat Datang</p>
                 <p style="margin-top: 3%;">Punya barang rusak?<br>
@@ -55,14 +73,7 @@
                     <button class="bsb" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <div class="signup">
-                <h1 style="margin-bottom: 2%;">ATAU</h1>
-                <p>
-                    Ingin bergabung bersama kami?<br>
-                    Daftar sekarang juga!
-                </p>
-                <a href=Pages/daftarweb.html>Daftar</a>
-            </div>
+            <br>
         </div>
         <div class="faq" id="faq">
             <h1>FAQ</h1>
@@ -103,12 +114,9 @@
                 G ada otak creatornya ajg
             </p>
         </div>
-        <div class="Bantuan">
-            
         </div>
         <div class="footer">
             <p>This fkin website made with ❤️ by @historialgd</p>
         </div>
-    
     </body>
 </html>

@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+.content {
+    text-align: center;
+    background-image: linear-gradient(to bottom, #0f3460, lightgray);
+    margin-top: 0;
+}
+.content p {
+    font-size: 20px;
+}
+/* Nav */
+div.head {
+    width:100%;
+    position: relative;
+    background-color: #0f3460;
+    padding: 1%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav {
+    display: flex;
+}
+li, a, button {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.navlink {
+    list-style: none;
+}
+.navlink li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.navlink li a {
+    transition: all 0.5s ease 0s;
+}
+.navlink li a:hover {
+    color: #9ba6b2;
+}
+button {
+    padding: 9px 20px;
+    background: 0 0;
+    border: 1px #fff solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+button:hover {
+    background-color: #3e5a7b;
+    border: 1px #0f3460 solid;
+}
+/* Nav */
+.wel_text{
+    margin: auto;
+    padding-top: 5%;
+    padding-left: 2%;
+    color: white;
+}
+.sb {
+    margin: auto;
+    background-color: #fff;
+    width: 40%;
+    border: 1px, #0f3460;
+    margin-top: 3%;
+    font-size: 20px;
+    border-radius: 50px;
+    font-style: italic;
+    -webkit-transition: border-radius 0.4s ease-in-out;
+    transition: border-radius 0.4s ease-in-out;
+}
+.sb input[type=search] {
+    border: none;
+    font-size: 20px;
+    padding-left: 3%;
+    width: 80%;
+    margin: auto;
+}
+.sb:hover{
+    transition: all 0.5s ease 0s;
+    border-radius: 5px;
+}
+.sb input:focus{
+    transition: all 0.5s ease 0s;
+    border-radius: 5px;
+    border:none;
+}
+.bsb {
+    font-size: 25px;
+}
+button.bsb {
+    padding: 9px 20px;
+    
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    color: black;
+}
+button.bsb:hover {
+    background-color:transparent;
+    border: none;
+}
+.signup {
+    margin-top: 2%;
+    color: white;
+}
+button.daftar {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.faq {
+    margin-top: 3%;
+    padding: 3%;
+}
+.g_reparasi {
+    position: absolute;
+    margin-left: 80%;
+    width: 10%;
+    height: auto;
+}
+button.daftar {
+    padding: 9px 20px;
+    background-color: #3e5a7b;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+button.daftar:hover {
+    background-color: #0f3460;
+    border: none;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color:#3e5a7b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+#myBtn:hover {
+    background-color:#0c2746; /* Add a dark-grey background on hover */
+}
+.about {
+    text-align: right;
+    padding: 3%;
+    color: white;
+    background-color:  #3e5a7b;
+}
+.footer {
+    background-color:#0f3460;
+    text-align: center;
+    padding: 1%;
+    color: white;
+}
+input[type=text], input[type=password], input[type=number] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+p.logout:hover {
+    color: #0c2746;
+}

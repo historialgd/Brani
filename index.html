@@ -1,114 +1,135 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-        <meta charset="utf-8">
-        <link rel="shortcut icon" href="Images/pincer.svg" type="image/x-icon">
-        <title>CaTech</title>
-        <link rel="stylesheet" href="/Styles/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/0ebf56afd6.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <div class="head">
-                <nav>
-                    <ul class="navlink">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="">Bantuan</a></li>
-                    </ul>
-                </nav>
-                <button><a href="/Pages/loginweb.php">Login</a></button>
-                </div>
-                <script>
-                    var modal = document.getElementById('login');
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
-                <script>
-                    var modal = document.getElementById('daftar');
+<html lang="en">
 
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
-            </div>
-        </header>
-        <button onclick="topFunction()" id="myBtn" title="Kembali ke atas"><i class="fas fa-angle-double-up"></i></button>
-        <script src="Scripts/scrollup.js"></script>
-        <div class="content">
-            <div class="wel_text">
-                <p class="welcome" style="font-size: 50px; font-weight: bold;">Selamat Datang</p>
-                <p style="margin-top: 3%;">Punya barang rusak?<br>
-                Perbaiki sekarang!
-                <br></p>
-            </div>
-            <div class="sb">
-                <form>
-                    <input type="search" placeholder="Coba telusuri 'Service AC'">
-                    <button class="bsb" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="signup">
-                <h1 style="margin-bottom: 2%;">ATAU</h1>
-                <p>
-                    Ingin bergabung bersama kami?<br>
-                    Daftar sekarang juga!
-                </p>
-                <a href=Pages/daftarweb.html>Daftar</a>
-            </div>
+<head>
+  <title>CaTech</title>
+  <!-- Meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="image/pincer.svg" type="image/x-icon">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/">test</a>
+      <div class="search-box">
+        <form action="">
+          <input type="text" placeholder="Cari barang..." />
+          <button><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="nav-right">
+        <a href="#about">About</a>
+        <a href="#second">Cara Order</a>
+        <a href="#third">Bantuan</a>
+        <div class="login-button">
+          <a href="javascript:void(0)"><i class="fa fa-sign-in-alt"></i></a>
         </div>
-        <div class="faq" id="faq">
-            <h1>FAQ</h1>
-            <br>
-            <h2>Program apa ini?</h2>
-            <p style="margin-top: 2%;">
-                Program ini memudahkan para client untuk menemukan 'Tukang Reparasi' atau 'Tukang Service' yang sesuai dengan kebutuhan dan lokasi client
-            </p>
-            <h2 style="margin-top: 3%;">
-                Bagaimana cara kerjanya?
-            </h2>
-            <p style="margin-top: 2%;">
-                Client akan menemukan 'Tukang' yang sesuai lalu permintaan client akan masuk ke dalam antrean 'Tukang' jika sudah diterima oleh 'Tukang'
-            </p>
-            <h2 style="margin-top: 3%;">
-                Bagaimana proses pembayarannya?
-            </h2>
-            <p style="margin-top: 2%;">
-                Proses pembayaran terjadi ketika 'Tukang' telah sampai ke lokasi client. Harga ditentukan oleh 'Tukang' sepenuhnya.
-            </p>
-            <h2 style="margin-top: 3%;">
-                Apakah client bisa membatalkan transaksinya?
-            </h2>
-            <p style="margin-top: 2%;">
-                Bisa selagi projek dari Client bukan bagian dari Antrean Utama 'Tukang'. Proses Transaksi akan dibatalkan otomatis ketika 'Tukang' tak menerima projek dari Client dalam waktu 2 hari.
-            </p>
-            <h2 style="margin-top: 3%;">
-                Apa itu Antrean Utama?
-            </h2>
-            <p style="margin-top: 2%;">
-                Antrean Utama adalah antrean yang sedang dikerjakan oleh 'Tukang'
-            </p>
-        </div>
-        <div class="about" id="about">
-            <h1>About</h1>
-            <br>
-            <p>
-                G ada otak creatornya ajg
-            </p>
-        </div>
-        <div class="Bantuan">
-            
-        </div>
-        <div class="footer">
-            <p>This fkin website made with ❤️ by @historialgd</p>
-        </div>
-    
-    </body>
+      </div>
+    </nav>
+    <section class="head">
+      <div class="head-content">
+        <h1>CaTech</h1>
+        <p>Tempat reparasi barang elektronik</p>
+      </div>
+    </section>
+  </header>
+
+  <section class="first-slide" id="about">
+    <article>
+      <h1>Tentang</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia esse
+        recusandae eum dignissimos mollitia illum nostrum earum, iure aperiam
+        voluptate suscipit perferendis eos. Doloribus tempore ea molestiae
+        nemo iure? Ab ipsa accusantium iste dolorum porro nihil, minus
+        necessitatibus cumque nemo doloremque ex unde deserunt delectus
+        cupiditate, sunt totam. Placeat, molestias!
+      </p>
+    </article>
+    <figure>
+      <img src="https://place-hold.it/350x250" alt="Illustration" />
+    </figure>
+  </section>
+
+  <section class="second-slide" id="second">
+    <figure>
+      <img src="https://place-hold.it/350x250" alt="Illustration" />
+    </figure>
+    <article>
+      <h1>Lorem, ipsum.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia esse
+        recusandae eum dignissimos mollitia illum nostrum earum, iure aperiam
+        voluptate suscipit perferendis eos. Doloribus tempore ea molestiae
+        nemo iure? Ab ipsa accusantium iste dolorum porro nihil, minus
+        necessitatibus cumque nemo doloremque ex unde deserunt delectus
+        cupiditate, sunt totam. Placeat, molestias!
+      </p>
+    </article>
+  </section>
+
+  <section class="third-slide" id="third">
+    <article>
+      <h1>Lorem, ipsum.</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia esse
+        recusandae eum dignissimos mollitia illum nostrum earum, iure aperiam
+        voluptate suscipit perferendis eos. Doloribus tempore ea molestiae
+        nemo iure? Ab ipsa accusantium iste dolorum porro nihil, minus
+        necessitatibus cumque nemo doloremque ex unde deserunt delectus
+        cupiditate, sunt totam. Placeat, molestias!
+      </p>
+    </article>
+    <figure>
+      <img src="https://place-hold.it/350x250" alt="Illustration" />
+    </figure>
+  </section>
+
+  <div class="links">
+    <!-- Left Section -->
+    <div class="left-section">
+      <section class="left-footer">
+        <p>Info</p>
+        <a href="#"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="#"><i class="fas fa-info-circle"></i> Tentang</a>
+        <a href="#"><i class="fas fa-bullseye"></i> Visi Misi</a>
+      </section>
+      <section class="center-footer">
+        <p>Bantuan</p>
+        <a href="#"><i class="fas fa-receipt"></i> Cara Order</a>
+        <a href="#"><i class="fas fa-address-book"></i> Kontak</a>
+      </section>
+      <section class="right-footer">
+        <p>Social Media</p>
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      Made with <i class="fas fa-heart" title="love"></i> and
+      <i class="fas fa-mug-hot" title="tea"></i> from
+      <span title="Country in southeast asia"><span class="indo">Indo</span>nesia</span>
+    </p>
+  </footer>
+
+  <!-- jQuery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

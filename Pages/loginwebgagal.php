@@ -21,7 +21,8 @@
             </div>
     </header>
     <div class="content" style="height:100%:">
-        <p>
+        <p style="color:white;">
+            Kombinasi Nama dan Password salah, Mohon Coba lagi<br><br>
             <form  action="/Pages/loggedinweb.php" method="POST" style="color:white;">
                 <b>Nama</b><br>
                 <input type="text" id="nama" placeholder="Masukkan Nama" name="nama" required autocomplete="off">
@@ -30,8 +31,7 @@
                 <input type="password" id="pw" placeholder="Masukkan Password" name="pw" required>
                 <br>
                 <button type="submit" class="login">Login</button>
-            </form><br>
-            <a href ="daftarweb.html">Belum Punya akun? Daftar Sekarang!</a>
+            </form>
         </p>
     </div>
     </body>

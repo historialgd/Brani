@@ -29,7 +29,7 @@
                                 $_SESSION['nama'] = $nama;
                                 $_SESSION['pw'] = $pw;
                             }else{
-                                header('Location: login.php');
+                                header('Location: loginwebgagal.php');
                             }
                         }
                         if(isset($_SESSION['nama'])){

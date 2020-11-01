@@ -12,60 +12,56 @@ body {
 }
 .content {
     text-align: center;
-    background-image: linear-gradient(to bottom, #0f3460, lightgray);
-    margin-top: 0;
+    background-color: #0f3460;
+    margin-top: auto;
     padding-bottom: 3%;
+    padding-top: 3%;
 }
 .content p {
     font-size: 20px;
 }
 /* Nav */
-div.head {
-    width:100%;
-    position: relative;
-    background-color: #0f3460;
-    padding: 1%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 
-}
-nav {
+header {
+    background: #16213e;
     display: flex;
-}
-li, a, button {
-    font-size: 20px;
-    color: whitesmoke;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  
+  header a {
+    color: #fff;
+    font-weight: bold;
+    padding: 1.5em 1em;
+    transition: color 0.3s;
     text-decoration: none;
-}
-.navlink {
-    list-style: none;
-}
-.navlink li {
-    display: inline-block;
-    padding: 0 20px;
-}
-.navlink li a {
-    transition: all 0.5s ease 0s;
-}
-.navlink li a:hover {
+    align-items: center;
+  }
+  
+  .headkiri {
+      display: flex;
+      width: 40%;
+  }
+  .headkanan {
+      display: flex;
+  }
+  .login-button {
+      display: flex;
+  }
+  a:hover {
     color: #9ba6b2;
-}
-button {
-    padding: 9px 20px;
-    background: 0 0;
-    border: 1px #fff solid;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.5s ease 0s;
-}
-button:hover {
-    background-color: #3e5a7b;
-    border: 1px #0f3460 solid;
-}
+  }
+  div.search-box {
+      display: flex;
+      padding-left: 5%;
+  }
+  form.head input[type=text] {
+      width: 90%;
+  }
 /* Nav */
 .wel_text{
     margin: auto;

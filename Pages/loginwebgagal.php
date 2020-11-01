@@ -9,18 +9,26 @@
         <script src="https://kit.fontawesome.com/0ebf56afd6.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <header>
-            <div class="head">
-                <nav>
-                    <ul class="navlink">
-                        <li name="test"><a href="#about">About</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="">Bantuan</a></li>
-                    </ul>
-                </nav>
+        <header>
+            <div class="headkiri">
+                <a href="/">BRANI</a>
+                <div class="search-box">
+                    <form class="head" action="">
+                        <input type="text" placeholder="Cari barang..." />
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
             </div>
-    </header>
-    <div class="content" style="height:100%:">
+            <div class="headkanan">
+              <a href="#about">About</a>
+              <a href="#faq">FAQ</a>
+              <a href="#third">Bantuan</a>
+              <div class="login-button">
+                <a href="Pages/daftarweb.html">Daftar</a>
+              </div>
+            </div>
+        </header>
+    <div class="content" style="height:100%:"><br><br><br>
         <p style="color:white;">
             Kombinasi Nama dan Password salah, Mohon Coba lagi<br><br>
             <form  action="/Pages/loggedinweb.php" method="POST" style="color:white;">

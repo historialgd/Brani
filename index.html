@@ -11,33 +11,23 @@
     </head>
     <body>
         <header>
-            <div class="head">
-                <nav>
-                    <ul class="navlink">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="">Bantuan</a></li>
-                    </ul>
-                </nav>
-                <button><a href="/Pages/loginweb.php">Login</a></button>
+            <div class="headkiri">
+                <a href="/">BRANI</a>
+                <div class="search-box">
+                    <form class="head" action="">
+                        <input type="text" placeholder="Cari barang..." />
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
                 </div>
-                <script>
-                    var modal = document.getElementById('login');
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
-                <script>
-                    var modal = document.getElementById('daftar');
-
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
+            </div>
+            <div class="headkanan">
+              <a href="#about">About</a>
+              <a href="#faq">FAQ</a>
+              <a href="#third">Bantuan</a>
+              <a href="Pages/daftarweb.html">Daftar</a>
+              <div class="login-button">
+                <a href="Pages/loginweb.php"><i class="fa fa-sign-in-alt"></i></a>
+              </div>
             </div>
         </header>
         <button onclick="topFunction()" id="myBtn" title="Kembali ke atas"><i class="fas fa-angle-double-up"></i></button>
@@ -51,7 +41,7 @@
             </div>
             <div class="sb">
                 <form>
-                    <input type="search" placeholder="Coba telusuri 'Service AC'">
+                    <input class="mainsearch" type="search" placeholder="Coba telusuri 'Service AC'">
                     <button class="bsb" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>

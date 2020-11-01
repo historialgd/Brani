@@ -10,12 +10,19 @@
     </head>
     <body>
         <header>
-            <div class="head">
-                <nav>
-                    <ul class="navlink">
-                        <li name="test"><a href="#about">About</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="">Bantuan</a></li>
+            <div class="headkiri">
+                <a href="/">BRANI</a>
+                <div class="search-box">
+                    <form class="head" action="">
+                        <input type="text" placeholder="Cari barang..." />
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="headkanan">
+              <a href="#about">About</a>
+              <a href="#faq">FAQ</a>
+              <a href="#third">Bantuan</a>
                         <?php
                             require('connect.php');
                             session_start();
@@ -30,34 +37,20 @@
                                 $_SESSION['pw'] = $pw;
                             }else{
                                 header('Location: loginwebgagal.php');
+                                }
                             }
-                        }
-                        if(isset($_SESSION['nama'])){
-                            $nama = $_SESSION['nama'];
-                            echo "<li style='margin-top:3%;'><a href='profileweb.php'>".$nama."</a></li>";
-                            echo "<a href='/Pages/logout.php' style='color:pink;'>Logout <li class='far fa-caret-square-right' name='logout'></li></a>";
-                        }
+                            if(isset($_SESSION['nama'])){
+                                $nama = $_SESSION['nama'];
+                                echo "<a href='profileweb.php'>".$nama."</a>";
+                            }
                         ?>
-                    </ul>
-                </nav>
+              <div class="login-button">
+                <a href="logout.php">Logout</a>
+              </div>
             </div>
-            <button onclick="topFunction()" id="myBtn" title="Kembali ke atas"><i class="fas fa-angle-double-up"></i></button>
-            <script>
-                mybutton = document.getElementById("myBtn");
-                window.onscroll = function() {scrollFunction()};
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        mybutton.style.display = "block";
-                    } else {
-                        mybutton.style.display = "none";
-                    }
-                }
-                function topFunction() {
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }
-            </script>
         </header>
+        <button onclick="topFunction()" id="myBtn" title="Kembali ke atas"><i class="fas fa-angle-double-up"></i></button>
+        <script src="/Scripts/scrollup.js"></script>
         <div class="content">
             <div class="welcome" style="text-align:center; font-size:50px;">
             </div>
